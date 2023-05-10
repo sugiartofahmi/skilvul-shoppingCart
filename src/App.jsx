@@ -10,7 +10,7 @@ const App = () => {
     setCart((prev) => [...prev, product]);
   };
 
-  const remoyeFromCart = (id) => {
+  const removeFromCart = (id) => {
     setCart((prev) => prev.filter((element) => element.id != id));
   };
 
@@ -41,7 +41,7 @@ const App = () => {
                   key={index}
                   image={element.image}
                   title={element.title}
-                  handleClick={() => remoyeFromCart(element.id)}
+                  handleClick={() => removeFromCart(element.id)}
                 />
               ))}
           </section>
