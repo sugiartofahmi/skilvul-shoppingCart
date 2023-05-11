@@ -7,7 +7,8 @@ const App = () => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-    setCart((prev) => [...prev, product]);
+    setCart((prev) => [...prev, { ...product, id: new Date().getTime() }]);
+    console.log(cart);
   };
 
   const removeFromCart = (id) => {
